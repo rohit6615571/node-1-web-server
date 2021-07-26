@@ -1,6 +1,8 @@
 // The primary use of Express is to provide server-side logic
 // for web and mobile applications.
-// hbs is used for handle bar templates.
+
+// hbs is used for creating handle bar templates.
+
 // git is responsible for keeping track of the changes to your
 // project
 
@@ -46,7 +48,13 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to my website'
-  })
+  });
+});
+
+app.get('/projects', ( req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
 });
 
 app.get('/about', (req, res) => {
